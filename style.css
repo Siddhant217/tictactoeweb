@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav 
+{
+    /* display: none; */
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height:45px;
+    display:flex;
+    font-size:20px;
+    font-weight: 900;
+    align-items:center;
+    padding:0 12px; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer
+{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.container
+{
+    display:grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Roboto', sans-serif;
+}
+.TurnandButton
+{
+    padding-top: 10px;
+}
+.resetButton{
+    padding-top: 10px;
+}
+.box
+{
+    border: 2px solid black;
+    font-size: 8vw;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(240, 235, 244);
+}
+
+.bt-0{
+  border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+
+.gameInfo{
+    padding: 0 34px;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 3sec ease-in-out;
+}
+#reset
+{
+    background-color: rgb(100, 122, 114);
+    border-radius: 6px;
+    padding: 3px;
+}
+@media screen and (max-width:500px)
+{
+    .gameContainer{
+        
+        flex-wrap: wrap;
+    }
+     .container{
+        grid-template-rows: repeat(3,15vw);
+    grid-template-columns: repeat(3,15vw);
+    } 
+    .gameInfo{
+        margin-top: 25px;
+    }
+    .gameInfo h3{
+        font-size: 1em;
+    }
+}
